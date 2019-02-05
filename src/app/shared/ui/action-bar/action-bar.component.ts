@@ -13,8 +13,9 @@ declare var android: any;
   moduleId: module.id
 })
 export class ActionBarComponent {
-  @Input() title: string;
+  @Input() title = '';
   @Input() showBackButton = true;
+  @Input() hasMenu = true;
 
   constructor(
     private page: Page,

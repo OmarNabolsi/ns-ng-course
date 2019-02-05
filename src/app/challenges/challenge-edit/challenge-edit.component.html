@@ -7,7 +7,7 @@
     ></TextField>
     <Button class="btn" text="Add Challenge" (tap)="onSetChallenge()"></Button>
   </FlexboxLayout> -->
-  <ns-action-bar title="Edit Challenge"></ns-action-bar>
-  <StackLayout>
+  <ns-action-bar [title]="isCreating ? 'Replace Challenge' : 'Edit Challenge'" [hasMenu]="false"></ns-action-bar>
+  <FlexboxLayout>
     <Label text="The edit page"></Label>
-  </StackLayout>
+  </FlexboxLayout>
