@@ -1,4 +1,19 @@
-<ns-action-bar title="Current Challenge"></ns-action-bar>
+<ns-action-bar title="Current Challenge" [showBackButton]="false">
+  <ActionItem
+    ios.position="right"
+    android.position="actionBar"
+    nsRouterLink="/challenges/replace"
+    pageTransition="slideLeft"
+    ><Label text="Replace"></Label
+  ></ActionItem>
+  <ActionItem
+    ios.position="right"
+    android.position="actionBar"
+    nsRouterLink="/challenges/edit"
+    pageTransition="slideLeft"
+    ><Label text="Edit"></Label
+  ></ActionItem>
+</ns-action-bar>
 <StackLayout>
   <Label
     class="title"
@@ -6,14 +21,5 @@
     horizontalAlignment="center"
   ></Label>
 
-  <Button
-    text="Edit"
-    class="btn btn-primary"
-    (tap)="onEdit()"
-  ></Button>
-  
-  <Button
-    text="Replace"
-    nsRouterLink="/challenges/replace"
-  ></Button>
+  <Button text="Change Status" (tap)="onChangeStatus()"></Button>
 </StackLayout>
