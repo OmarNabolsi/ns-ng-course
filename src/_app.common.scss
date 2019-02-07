@@ -18,24 +18,30 @@ ActionBar {
     align-items: center;
 }
 
-.input-field {
-    width: 80%;
-    .label {
-        color: $primary;
-        font-weight: bold;
-    }
-    
-    .input {
-        border-bottom-width: 2;
-        border-color: $primary;
-        width: 100%;
+.form {
+    .input-field {
+        width: 80%;
+        .label {
+            color: $primary;
+            font-weight: bold;
+            font-family: 'Oswald', 'Oswald-Regular', 'Oswald-Bold';
+        }
+        
+        .input {
+            border-bottom-width: 2;
+            border-color: $primary;
+            width: 100%;
+        }
     }
 }
+
+
 
 
 .h1 {
     font-weight: bold;
     color: $primary;
+    font-family: 'Oswald', 'Oswald-Regular', 'Oswald-Bold';
 }
 
 // .form-control {
@@ -60,6 +66,12 @@ ActionBar {
     border-width: 1;
     color: $primary;
 }
+
+
+.fa {
+    font-family: 'FontAwesome', 'Font-Awesome';
+}
+
 
 // .btn {
 //     border-width: 1;

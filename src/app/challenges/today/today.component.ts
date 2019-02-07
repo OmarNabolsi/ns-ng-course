@@ -7,4 +7,8 @@ import { Component, ModuleWithComponentFactories } from "@angular/core";
     moduleId: module.id
 })
 export class TodayComponent {
+
+    onActionSelected(action: 'complete' | 'fail' | 'cancel') {
+        console.log(action);
+    }
 }
