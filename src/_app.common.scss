@@ -53,11 +53,17 @@ ActionBar {
 // }
 
 .drawer-container {
-    background: linear-gradient(140deg, #2b0c72, #5c3fa0);
+    background: linear-gradient(140deg, #9a92ac, #9373df);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20;
+
+    .btn {
+        width: 80%;
+        height: 45;
+        font-size: 18;
+    }
 }
 
 .btn-flat {
