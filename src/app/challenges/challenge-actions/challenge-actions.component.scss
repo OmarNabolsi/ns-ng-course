@@ -12,13 +12,46 @@ FlexboxLayout {
 }
 
 .btn-success {
-    background: $success;
+    background-color: $success;
     border-color: $success;
-    color: $white;
+    border-width: 1;
+    color: white;
 }
 
 .btn-fail {
-    background: $fail;
+    background-color: $fail;
     border-color: $fail;
+    border-width: 1;
     color: $white;
+}
+
+.btn-success:disabled,
+.btn-fail:disabled {
+    background-color: #ccc;
+    color: #777777;
+    border-color: #ccc;
+}
+
+.btn-alt {
+    horizontal-alignment: center;
+    font-size: 30;
+    margin-top: 15;
+}
+
+.animate-button {
+    animation-name: slide-up;
+    animation-iteration-count: 1;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(30);
+        opacity: 0.1;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
