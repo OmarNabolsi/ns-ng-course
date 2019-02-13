@@ -56,5 +56,7 @@
     class="btn btn-primary"
     (tap)="onSubmit()"
     [isEnabled]="form.valid"
+    *ngIf="!isLoading"
   ></Button>
+  <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
 </StackLayout>
