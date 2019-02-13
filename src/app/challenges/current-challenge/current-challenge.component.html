@@ -36,8 +36,12 @@
         pageTransition="slideLeft"
       ></Button>
     </StackLayout>
-    <StackLayout *ngIf="currentChallenge">
-      <Label class="h1 text-center" [text]="currentChallenge.title"></Label>
+    <StackLayout *ngIf="currentChallenge" marginBottom="10">
+      <Label
+        class="h1 text-center"
+        [text]="currentChallenge.title"
+        width="100%"
+      ></Label>
       <Label
         class="body text-center"
         [text]="currentChallenge.description"
@@ -59,7 +63,11 @@
       <FlexboxLayout
         *ngFor="let day of currentChallenge.days; let i = index"
         class="day"
-        [ngClass]="{'not-settable': !getIsSettable(day.dayInMonth), completed: day.status === 1, failed: day.status === 2}"
+        [ngClass]="{
+          'not-settable': !getIsSettable(day.dayInMonth),
+          completed: day.status === 1,
+          failed: day.status === 2
+        }"
         [row]="getRow(i, day)"
         [col]="day.dayInWeek"
         (tap)="onChangeStatus(day)"

@@ -33,7 +33,6 @@ FlexboxLayout {
 }
 
 .btn-alt {
-    horizontal-alignment: center;
     font-size: 30;
     margin-top: 15;
 }
@@ -51,7 +50,7 @@ FlexboxLayout {
         opacity: 0.1;
     }
     to {
-        transform: translate(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
